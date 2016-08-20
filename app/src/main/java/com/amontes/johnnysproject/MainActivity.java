@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // Tool Bar tom foolery.
+    // Tool Bar tom foolery*************************************************************************
     public boolean onCreateOptionsMenu(Menu menu) {
 
         MenuInflater inflater = getMenuInflater();
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
 
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
 
     }
+    //**********************************************************************************************
 
     /**
      * This method is called when the order button is clicked.
