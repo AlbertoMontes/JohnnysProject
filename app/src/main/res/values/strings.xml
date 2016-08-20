@@ -7,5 +7,10 @@
     <string name="intPrice">$5</string>
     <string name="plus">+</string>
     <string name="minus">-</string>
+    <string name="menu_item_title">Easter Egg</string>
+    <string name="title_activity_easter_egg">EasterEggActivity</string>
+    <string name="easter_egg_activity_descrip">ShowPic</string>
+    <string name="no_disasemble">NO DISASEMBLE!</string>
+    <string name="easter_button_back_text">Back</string>
 </resources>
 

@@ -1,7 +1,11 @@
 package com.amontes.johnnysproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -26,6 +30,30 @@ public class MainActivity extends AppCompatActivity {
         //quantity = (TextView) findViewById(R.id.quantity_text_view); <-- Again, no need for this.
         quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         priceTextView = (TextView) findViewById(R.id.price_text_view);
+
+    }
+
+    // Tool Bar tom foolery.
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.options_menu, menu);
+        return true;
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        switch(id){
+
+            case R.id.action_easter:
+                goToEasterEgg();
+
+        }
+
+        return true;
 
     }
 
@@ -82,4 +110,12 @@ public class MainActivity extends AppCompatActivity {
 
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
+
+    protected void goToEasterEgg(){
+
+        Intent easterIntent = new Intent(this, EasterEggActivity.class);
+        startActivity(easterIntent);
+
+    }
+
 }
