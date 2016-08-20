@@ -51,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.action_easter:
                 goToEasterEgg();
+                break;
+
+            default:
+                break;
 
         }
 
