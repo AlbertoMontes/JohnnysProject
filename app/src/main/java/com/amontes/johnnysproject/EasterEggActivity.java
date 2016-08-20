@@ -9,13 +9,14 @@ import android.widget.Button;
 public class EasterEggActivity extends AppCompatActivity {
 
     Button backButton;
+    MediaPlayer mPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easter_egg);
 
-        MediaPlayer mPlayer = MediaPlayer.create(EasterEggActivity.this, R.raw.input);
+        mPlayer = MediaPlayer.create(EasterEggActivity.this, R.raw.input);
         mPlayer.start();
 
         backButton = (Button)findViewById(R.id.backButton);
@@ -28,6 +29,17 @@ public class EasterEggActivity extends AppCompatActivity {
             }
 
         });
+
+    }
+
+    //Clean up.
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        mPlayer.stop();
 
     }
 
